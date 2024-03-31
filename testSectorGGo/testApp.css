@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section_scollContact{
+    width: 100%;
+    display: flex;    
+    justify-content: center;
+}
+
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+
+.tag-list li{
+    padding: 1rem;
+    background: var(--clr-primary-400);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem;
+}
+
+.scorler{
+    width: 400px;
+    overflow: hidden;
+    /* outline: 3px solid limegreen; */
+}
+
+.scorler__inner{
+    padding-block:1rem ;
+    gap: 1rem;
+    display: flex;
+}
