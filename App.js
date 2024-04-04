@@ -23,3 +23,11 @@ const scrollSmoothlyToBottom = (id) => {
     3000
   );
 };
+
+
+// sorlling sector_2
+let coppy = document.querySelector('.logos_slide').cloneNode(true);
+document.querySelector('.scroll_partner').appendChild(coppy);
+
+
+

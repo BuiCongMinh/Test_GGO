@@ -230,7 +230,7 @@
 .App_body .sector_2 {
   background: white;
   color: black;
-  padding: 9% 0% 9% 0%;
+  padding-top: 15%;
 }
 
 .sector_2 {
@@ -250,15 +250,72 @@
   padding: 80px 0px 45px 0px;
 }
 
-.sector_2 .partner{
+.sector_2 .partner {
   margin: 0px 90px;
 }
 
 .sector_2 .partner .scroll_partner {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
 }
 
-.section {
-  margin-top: 45%;
+@keyframes slide {
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(-100%);
+  }
+}
+
+.scroll_partner::before,
+.scroll_partner::after{
+    position: absolute;
+    top: 0;
+    width: 10vw;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+.scroll_partner::before{
+    background: linear-gradient(to left,rgba(255,255,255,0),white);
+    left: 0;
+}
+
+.scroll_partner::after{
+    background: linear-gradient(to right,rgba(255,255,255,0),white);
+    right: 0;
+}
+
+.scroll_partner:hover .logos_slide{
+    animation-play-state: paused;
+}
+
+.logos_slide{
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    animation: 25s slide infinite linear;
+}
+
+.logos_slide img{
+    height: 14vw;
+    margin: 0px 3px;
+    border-radius: 10px 10px 10px 10px;
+    transition: 0.5s transform ;
+    cursor: pointer;
+}
+.logos_slide img:hover{
+    transform: scale(1.16);
+}
+
+
+
+.sector_2 .section {
+  margin-bottom: 20vh;
+  margin-top: 3%;
   height: 221px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -272,18 +329,17 @@
   align-content: center;
   /* canh giữa theo chiều dọc */
   position: relative;
-
 }
 
-.section .border{
+.sector_2 .section .border {
   position: absolute;
   width: 101%;
   height: 200px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   /* padding: 2px; */
-  border: 5px solid white;
+  border: 7px solid white;
 }
 
 .contact_item {
@@ -291,15 +347,62 @@
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-
-
 }
 
 .contact_item img {
   max-width: 100%;
   max-height: 100%;
 }
- 
+
+/* sector_3  */
+.sector_3{
+  width: 100%;
+  background: url('./img/sector3/landing-showcase-01-2.jpg');
+  background-size: cover;
+  padding: 80px 0px 45px 0px ;
+  /* display: flex; */
+}
+.sector_3 .title{
+  height: 181.98px;
+  position: relative;
+  
+}
+.sector_3 .title h2{
+  font-size: 55px;
+  line-height: 1.0363em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.sector_3 .service_list{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  transition: 0.5s;
+  animation: infinite linear;
+  
+}
+
+.sector_3 .service_list img{
+  flex-grow: 1;
+  max-width: 19%;
+  margin: 2px;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.sector_3 .service_list img:hover{
+  transform: scale(1.13);
+}
+
+
+
 
 /* footer */
 .App_body .footer {
@@ -359,6 +462,7 @@
     opacity: 1;
   }
 }
+
 
 /* contact */
 .App_body .contact {
@@ -484,3 +588,4 @@
   justify-content: center;
   align-items: center;
 }
+

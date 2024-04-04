@@ -1,36 +1,100 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.section_scollContact{
-    width: 100%;
-    display: flex;    
-    justify-content: center;
+.wrapper {
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
 }
 
-.tag-list {
-    margin: 0;
-    padding-inline: 0;
-    list-style: none;
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
-.tag-list li{
-    padding: 1rem;
-    background: var(--clr-primary-400);
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem -0.25rem;
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
-.scorler{
-    width: 400px;
-    overflow: hidden;
-    /* outline: 3px solid limegreen; */
+.carousel:where(.card, .img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.scorler__inner{
-    padding-block:1rem ;
-    gap: 1rem;
-    display: flex;
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.carousel .card:hover {
+  transform: scale(1.19);
+}
+
+.card .img img {
+  width: 25vw;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 2px);
+  }
+  .card .img img {
+    width: 47vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+  .card .img img {
+    width: 100vw;
+  }
+}
+.wrapper .index-images {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .index-images .index-item {
+  width: 1.3vw;
+  height: 2.05vh;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.wrapper .index-images .index-item.active {
+  background: black;
 }
