@@ -496,20 +496,18 @@
 }
 
 .contact .right .square-icon {
-  margin-top: 4px;
-  margin-right: 12px;
+  margin-right: 31px;
   display: inline-block;
   width: 12px;
   height: 16px;
-  border: 1px solid red; /* Thiết lập viền màu đỏ */
-  border-radius: 0; /* Đảm bảo góc hình vuông trở nên tròn */
-  box-sizing: border-box; /* Đảm bảo kích thước của thẻ i bao gồm cả độ dày của viền */
+  font-size: 25px;
+  color: red;
   transition: all 0.5s;
   cursor: pointer;
 }
 
 .contact .right .square-icon:hover {
-  border: 1px solid rgb(76, 76, 238);
+  color:rgb(76, 76, 238);
 }
 .contact .right span {
   display: flex;
