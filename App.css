@@ -408,7 +408,8 @@
 .App_body .footer {
   height: 511.89px;
   color: white;
-  background: url(https://ggo.vn/wp-content/uploads/2022/05/BG-about-us.jpg);
+  background: url(./video/loop.mp4);
+  filter: brightness(2);
   text-align: center;
   display: flex;
   flex-direction: column;
