@@ -101,7 +101,7 @@
 .App_body .sector_1 {
   background: black;
   color: white;
-  padding: 9% 6% 9% 6%;
+  padding: 40px 6% 9% 6%;
   background: url(./img/sector3/landing-showcase-01-2.jpg);
   background-size: cover;
 }
@@ -362,7 +362,7 @@
   width: 100%;
   background: url("./img/sector3/landing-showcase-01-2.jpg");
   background-size: cover;
-  padding: 80px 0px 45px 0px;
+  padding: 30px 0px 45px 0px;
   /* display: flex; */
 }
 .sector_3 .title {
@@ -409,7 +409,7 @@
   height: auto;
   background: black;
   color: white;
-  padding: 0 2% 3% 2%;
+  padding: 40px 0% 8% 0%;
 }
 
 .sector_4 .title {
@@ -729,8 +729,17 @@
   .sector_3 {
     padding: 24px 0px 45px 0px;
   }
+  .sector_3 .title{
+    height: 100%;
+    margin: 40px 0 25% 0;
+  }
   .sector_3 .title h2 {
-    font-size: 27px;
+    font-size: 30px;
+  }
+
+  /* sector_4 */
+  .sector_4 .title{
+    font-size: 30px;
   }
 
   /* contact  */
