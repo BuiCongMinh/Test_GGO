@@ -741,6 +741,9 @@
   .sector_4 .title{
     font-size: 30px;
   }
+  .owl-carousel .item {
+    padding: 0 5%;
+  }
 
   /* contact  */
   .App_body .contact {

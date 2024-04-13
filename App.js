@@ -25,7 +25,7 @@ owl.owlCarousel({
   dotsSpeed: 1000,
   responsive: {
     0: {
-      items: 2,
+      items: 1,
       center: false,
     },
     600: {
