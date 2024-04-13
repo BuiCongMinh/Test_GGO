@@ -8,7 +8,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GGO.Test</title>
-    <link rel="stylesheet" href="./font/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css"/>
+    <link
+      rel="stylesheet"
+      href="./font/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css"
+    />
+
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.min.css" />
+
     <link rel="stylesheet" href="./App.css" />
   </head>
 
@@ -20,18 +27,24 @@
           <figcaption style="color: white">CÔNG TY CỔ PHẦN GGO</figcaption>
         </div>
         <button
+          style="display: block; z-index: 9999"
           id="scrollToFooterBtn"
-          onclick="scrollSmoothlyToBottom('App_body')"
+          onclick="scrollSmoothlyToBottom('contact')"
         >
           Liên Hệ
         </button>
-        <img id="btnDown" src="./img/headers/logo-ggo-arrow.png" alt="" />
+        <img
+          id="btnDown"
+          src="./img/headers/logo-ggo-arrow.png"
+          alt=""
+          onclick="scrollSmoothlyToBottom('sector_1')"
+        />
         <video id="background-video" loop muted autoplay>
           <source src="./video/loop.mp4" type="video/mp4" />
         </video>
       </div>
 
-      <div class="sector_1">
+      <div class="sector_1" id="sector_1">
         <div class="title">
           <h2>DỰ ÁN</h2>
         </div>
@@ -133,7 +146,7 @@
 
       <div class="sector_3">
         <div class="title">
-          <h2 style="text-transform: uppercase;">dịch vụ</h2>
+          <h2 style="text-transform: uppercase">dịch vụ</h2>
         </div>
         <div class="service_list">
           <img src="../img/sector3/anh1.jpg" alt="" />
@@ -144,11 +157,24 @@
         </div>
       </div>
 
-      <div class="sector_4">sector_1</div>
+      <div class="sector_4">
+        <div class="title">
+          <h2>Sản phẩm</h2>
+        </div>
+        <div class="owl-carousel">
+          <div class="item"><img src="./img/sector4/3.jpg" alt="" /></div>
+          <div class="item"><img src="./img/sector4/gif1.gif" alt="" /></div>
+          <div class="item"><img src="./img/sector4/gif5.gif" alt="" /></div>
+          <div class="item">
+            <img src="./img/sector4/Sequence-01.gif" alt="" />
+          </div>
+          <div class="item"><img src="./img/sector4/gif5.gif" alt="" /></div>
+        </div>
+      </div>
 
       <div class="footer">
         <div class="top">
-          <h2>VÊ CHÚNG TÔI</h2>
+          <h2>VỀ CHÚNG TÔI</h2>
         </div>
 
         <div class="middle">
@@ -171,7 +197,7 @@
         </div>
       </div>
 
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="logo">
           <img src="./img/headers/logo-ggo.png" alt="" />
           <figcaption style="color: white">CÔNG TY CỔ PHẦN GGO</figcaption>
@@ -215,7 +241,7 @@
               </div>
             </div>
             <div class="content">
-              <span style="text-transform: uppercase;">thông tin</span>
+              <span style="text-transform: uppercase">thông tin</span>
               <p>Chơi quá 180 phút 1 ngày ảnh hưởng xấu đến sức khỏe.</p>
               <p>Giấy phép G1 số: 103/GP-BTTTT Ngày 17/01/2020.</p>
               <p>Bộ Thông tin và Truyền thông cấp ngày 16/3/2020</p>
@@ -231,12 +257,10 @@
 
       <div class="license">Bản quyền nội dung thuộc về GGO JSC.</div>
     </div>
+
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"
-    integrity="sha512-jGR1T3dQerLCSm/IGEGbndPwzszJBlKQ5Br9vuB0Pw2iyxOy+7AK+lJcCC8eaXyz/9du+bkCy4HXxByhxkHf+w=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+
+  <script src="./jquery.min.js"></script>
+  <script src="./owl.carousel.min.js"></script>
   <script src="./App.js"></script>
 </html>
