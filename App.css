@@ -904,3 +904,9 @@
     padding: 0 2vw;
   }
 }
+
+@media screen and (max-width: 1030px) {
+  .footer .top{
+    height: 20vw;
+  }
+}
