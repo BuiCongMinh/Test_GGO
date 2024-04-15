@@ -727,7 +727,7 @@
     margin: 40px 0 25% 0;
   }
   .sector_3 .title h2 {
-    font-size: 30px;
+    font-size: 10vw;
   }
 
   /* sector_4 */
@@ -848,7 +848,7 @@
   }
 
   .footer .top h2 {
-    font-size: 40px;
+    font-size: 10vw;
     padding: 30px 0px 0px 0px;
   }
 
