@@ -1,3 +1,4 @@
+// scrolling smooth button
 const scrollSmoothlyToBottom = (to) => {
   $("html, body").animate({ scrollTop: $(`#${to}`).offset().top }, 1000);
 };
@@ -10,6 +11,7 @@ document.querySelector(".scroll_partner").appendChild(coppy);
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel();
 });
+
 let owl = $(".owl-carousel");
 console.log(owl);
 owl.owlCarousel({
@@ -28,9 +30,12 @@ owl.owlCarousel({
       items: 1,
       center: false,
     },
-    600: {
-      items: 4,
+    768: {
+      items: 3,
     },
+    900: {
+      items: 4,
+    }
   },
 });
 
@@ -40,3 +45,4 @@ $(".play").on("click", function () {
 $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
+

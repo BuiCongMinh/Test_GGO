@@ -235,7 +235,7 @@
 .App_body .sector_2 {
   background: white;
   color: black;
-  padding-top: 15%;
+  padding-top: 20vw;
 }
 
 .sector_2 {
@@ -405,7 +405,6 @@
 /* sector_4  */
 
 .sector_4 {
-  width: 100vw;
   height: auto;
   background: black;
   color: white;
@@ -420,7 +419,7 @@
   justify-content: center;
   align-items: center;
 }
-.owl-carousel{
+.owl-carousel {
   display: block;
 }
 
@@ -450,7 +449,6 @@
   background: white;
 }
 
-
 /* footer */
 .App_body .footer {
   height: 511.89px;
@@ -465,7 +463,6 @@
 }
 .footer .top {
   height: 30vh;
-  padding: 20px 0px 45px 0px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -475,28 +472,25 @@
   padding: 80px 0px 45px 0px;
 }
 .footer .middle p {
-  margin: 0px 0px -92px 0px;
-  padding: 40px 160px 0px 160px;
+  padding: 0px 5%;
   font-size: 15px;
   line-height: 2;
   position: relative;
-}
-.footer #member {
-  position: absolute;
-  font-size: 15px;
-  bottom: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .footer .bottom {
   width: 100%;
   position: absolute;
   bottom: 8%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 50px;
 }
+.footer .bottom #member {
+  font-size: 45%;
+}
+
 .footer .bottom h2 .blinking {
   animation: blink 1s infinite;
 }
@@ -520,6 +514,7 @@
   padding: 40px 0px 0px 0px;
   position: relative;
   z-index: 1;
+  margin-bottom: 2vw
 }
 
 .contact .logo {
@@ -614,7 +609,7 @@
   background-color: black;
   color: white;
   font-family: "Roboto", Sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   padding: 10px;
   display: flex;
@@ -622,9 +617,8 @@
   align-items: center;
 }
 
-/* responesive  */
-
-@media screen and (max-width: 600px) {
+/* responesive phone */
+@media screen and (max-width: 768px) {
   .App_body .header {
     height: 100vh;
     width: 100%;
@@ -705,7 +699,7 @@
   }
 
   .sector_2 .title h2 {
-    font-size: 27px;
+    font-size: 40px;
   }
 
   .sector_2 .partner .logos_slide img {
@@ -729,7 +723,7 @@
   .sector_3 {
     padding: 24px 0px 45px 0px;
   }
-  .sector_3 .title{
+  .sector_3 .title {
     height: 100%;
     margin: 40px 0 25% 0;
   }
@@ -738,7 +732,7 @@
   }
 
   /* sector_4 */
-  .sector_4 .title{
+  .sector_4 .title {
     font-size: 30px;
   }
   .owl-carousel .item {
@@ -865,12 +859,6 @@
     text-align: justify;
   }
 
-  .footer #member {
-    bottom: 20%;
-    font-size: 15px;
-    width: 100%;
-  }
-
   .footer .bottom {
     width: 100%;
     position: unset;
@@ -878,6 +866,42 @@
     justify-content: center;
     align-items: center;
     font-size: 10vw;
-    margin-top: 10vh;
+    margin-top: 10vw;
+  }
+  .footer .bottom #member {
+    font-size: 15px;
+    padding: 0 10vw;
+    width: 100%;
+    margin-bottom: 0;
+
+  }
+  .footer .bottom h2{
+    height: 100%;
+  }
+}
+
+/* responesive touch-pad  */
+@media screen and (max-width: 900px) {
+  
+  /* sector_2  */
+  .App_body .sector_2{
+    padding-top: 20vw;
+  }
+  .sector_2 .title{
+    font-size: 230%;
+  }
+
+  /* sector_4  */
+  .sector_4 .title {
+    font-size: 30px;
+  }
+
+  /* contact  */
+  .App_body .contact{
+    height: 100%;
+  }
+  
+  .owl-carousel .item {
+    padding: 0 2vw;
   }
 }
